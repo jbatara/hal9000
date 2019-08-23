@@ -8,10 +8,42 @@ html {
   background: url(../img/hal.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
 }
 
+form{
+  display: none;
+}
+.hello{
+  display: none;
+}
+.question{
+  display: none;
+}
 .answer{
   display: none;
+}
+
+.cursor{
+  display: inline-block;
+  overflow: hidden;
+  border-right: .2em solid #7388AC; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { max-width: 0 }
+  to { max-width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #7388AC; }
 }

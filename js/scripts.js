@@ -1,5 +1,13 @@
 $(document).ready(function() {
-
+  $(".hello").show();
+  setTimeout(function(){
+    $(".hello").removeClass("cursor");
+    $(".question").addClass("cursor");
+    $(".question").show();
+    setTimeout(function(){
+      $("form").show();
+    }, 3000);
+  }, 3000);
 
 
   $("form").submit(function(event) {
@@ -8,17 +16,10 @@ $(document).ready(function() {
     var userInput = $("[name=number]").val();
     var answer = numberQuery(userInput);
     answer.forEach(function(number,i){
-      if(i===0){
-        $(".answer").clear();
-        $(".answer").append("<h2>I have found the following numbers:</h2>");
         $(".answer").append("<p>" + number + "</p>");
-      }else{
-        $(".answer").append("<p>" + number + "</p>");
-      }
-
     });
-
     $(".answer").show();
+    $(".question").hide();
   });
 });
 
