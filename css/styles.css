@@ -1,9 +1,3 @@
-body {
-  text-align: center;
-  background-color: transparent;
-  color:white;
-}
-
 html {
   background: url(../img/hal.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -11,19 +5,37 @@ html {
   background-size: cover;
 }
 
-form{
-  display: none;
+body {
+  vertical-align: middle;
+  text-align: center;
+  background-color: transparent;
+  color:white;
 }
-.hello{
-  display: none;
+
+.centered{
+  padding-top: 10%;
 }
-.question{
-  display: none;
-}
-.answer{
+
+.userName{
   display: none;
 }
 
+.number{
+  display: none;
+}
+
+.hello{
+  display: none;
+  letter-spacing: .15em;
+}
+.question{
+  display: none;
+  letter-spacing: .15em;
+}
+.answer{
+  display: none;
+  letter-spacing: .15em;
+}
 .cursor{
   display: inline-block;
   overflow: hidden;
