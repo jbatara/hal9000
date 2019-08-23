@@ -52,10 +52,11 @@ function allNumbers(number) {
 function numberQuery(number) {
   var answer = [];
   var userNumbers = allNumbers(number);
+  var userName = $(".userName input").val();
 
   for (var i = 0; i < userNumbers.length; i++) {
     if (userNumbers[i].includes("3")) {
-      answer.push(i + ": I'm sorry, Dave. I'm afraid I can't do that.");
+      answer.push(i + ": I'm sorry, " + userName + ". I'm afraid I can't do that.");
     } else if (userNumbers[i].includes("2")) {
       answer.push(i + ": Boop!");
     } else if (userNumbers[i].includes("1")) {
