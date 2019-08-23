@@ -7,9 +7,18 @@ $(document).ready(function() {
     event.preventDefault();
     var userInput = $("[name=number]").val();
     var answer = numberQuery(userInput);
-    answer.forEach(function(number){
-    $(".answer").append("<p>" + number + "</p>");
+    answer.forEach(function(number,i){
+      if(i===0){
+        $(".answer").clear();
+        $(".answer").append("<h2>I have found the following numbers:</h2>");
+        $(".answer").append("<p>" + number + "</p>");
+      }else{
+        $(".answer").append("<p>" + number + "</p>");
+      }
+
     });
+
+    $(".answer").show();
   });
 });
 
