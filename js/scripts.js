@@ -22,19 +22,29 @@ $(document).ready(function() {
 
 
   $("input.number").click(function(event) {
-    removeCursor($(".question"));
+    $(".question").removeClass("cursor");
+    $(".question").show();
   });
 
   $("form.number").submit(function(event) {
-
     event.preventDefault();
     var userInput = $("[name=number]").val();
-    var answer = numberQuery(userInput);
+    var answerf = numberQuery(userInput);
+    var answerr = numberQuery(userInput).reverse();
     $(".hello, .question, .number").hide();
-    answer.forEach(function(number, i) {
-      $(".answer").append("<p>" + number + "</p>");
+    answerf.forEach(function(number, i) {
+      $(".answerf").append("<p>" + number + "</p>");
     });
-    $(".answer").show();
+    answerr.forEach(function(number, i) {
+      $(".answerr").append("<p>" + number + "</p>");
+    });
+    $(".answerf").show();
+    $(".reverse").show();
+  });
+
+  $(".reverse").click(function(event){
+    $(".answerf").toggle();
+    $(".answerr").toggle();
   });
 });
 
