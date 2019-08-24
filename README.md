@@ -46,7 +46,7 @@ Using Hal9000: Hal will ask for your name. Please type in your name and press su
 
 ## Known Bugs
 
-Currently after Hal finishes typing his personalized hello message, the message shrinks. A future update will fix this.
+The click listener for when the user clicks the query input box is not stopping the cursor on the label from blinking. A future update will address this.
 
 ## Support and contact details
 
