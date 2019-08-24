@@ -30,34 +30,43 @@ $(document).ready(function() {
     event.preventDefault();
     var userName = $(".userName input").val();
     var userInput = $("[name=number]").val();
-    if(validNumber(userInput)){
+    if (validNumber(userInput)) {
+      $(".answer").addClass("cursor");
+      setTimeout(function() {
+        $(".answer").removeClass("cursor");
+        $(".answer").show();
+        setTimeout(function() {
+          $(".answerf").show();
+          $(".reverse").show();
+        }, 1000);
+      }, 3000);
       var answerf = numberQuery(userInput);
       var answerr = numberQuery(userInput).reverse();
       $(".hello, .question, .number").hide();
+
       answerf.forEach(function(number, i) {
         $(".answerf").append("<p>" + number + "</p>");
       });
       answerr.forEach(function(number, i) {
         $(".answerr").append("<p>" + number + "</p>");
       });
-      $(".answerf").show();
-      $(".reverse").show();
-    } else{
-      alert(userName +", you must input a number >= 0");
+
+    } else {
+      alert(userName + ", you must input a number >= 0");
     }
 
   });
 
-  $(".reverse").click(function(event){
+  $(".reverse").click(function(event) {
     $(".answerf").toggle();
     $(".answerr").toggle();
   });
 });
 
-function validNumber(input){
-  if(parseInt(input) >= 0){
+function validNumber(input) {
+  if (parseInt(input) >= 0) {
     return true;
-  }else{
+  } else {
     return false;
   }
 }

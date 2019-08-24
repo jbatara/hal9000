@@ -28,9 +28,19 @@ body {
 
 .hello {
   display: none;
+  letter-spacing: .15em;
 }
 
 .question {
+  display: none;
+}
+
+.answer {
+  display: none;
+  letter-spacing: .15em;
+}
+
+.reverse {
   display: none;
 }
 
@@ -39,10 +49,6 @@ body {
 }
 
 .answerr {
-  display: none;
-}
-
-.reverse {
   display: none;
 }
 
