@@ -48,6 +48,13 @@ $(document).ready(function() {
   });
 });
 
+function validNumber(input){
+  if(parseInt(input) > 0){
+    return true;
+  }else{
+    return false;
+  }
+}
 
 function allNumbers(number) {
   var answer = [];
