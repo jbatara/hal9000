@@ -28,18 +28,24 @@ $(document).ready(function() {
 
   $("form.number").submit(function(event) {
     event.preventDefault();
+    var userName = $(".userName input").val();
     var userInput = $("[name=number]").val();
-    var answerf = numberQuery(userInput);
-    var answerr = numberQuery(userInput).reverse();
-    $(".hello, .question, .number").hide();
-    answerf.forEach(function(number, i) {
-      $(".answerf").append("<p>" + number + "</p>");
-    });
-    answerr.forEach(function(number, i) {
-      $(".answerr").append("<p>" + number + "</p>");
-    });
-    $(".answerf").show();
-    $(".reverse").show();
+    if(validNumber(userInput)){
+      var answerf = numberQuery(userInput);
+      var answerr = numberQuery(userInput).reverse();
+      $(".hello, .question, .number").hide();
+      answerf.forEach(function(number, i) {
+        $(".answerf").append("<p>" + number + "</p>");
+      });
+      answerr.forEach(function(number, i) {
+        $(".answerr").append("<p>" + number + "</p>");
+      });
+      $(".answerf").show();
+      $(".reverse").show();
+    } else{
+      alert(userName +", you must input a number >= 0");
+    }
+
   });
 
   $(".reverse").click(function(event){
@@ -49,7 +55,7 @@ $(document).ready(function() {
 });
 
 function validNumber(input){
-  if(parseInt(input) > 0){
+  if(parseInt(input) >= 0){
     return true;
   }else{
     return false;
