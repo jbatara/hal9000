@@ -19,10 +19,14 @@ The special outputs are listed from highest(top) to lowest(bottom) priority. Ple
 1. The user input number must be greater than 0
 2. If multiple special numbers are present, the special output with the highest priority will be printed.
 
-| Spec                      |Input          | Output |
-|:---------------------------|:-------------:|:------|
-| User must input number >0 | 0 | Error is given as an alert |
-| Special Output Priority|    13   |  0 <br> 1: "Beep"!<br>2: "Boop!"<br>3: "I'm sorry..."<br>4<br>5<br>6<br>7<br>8<br>9<br>10: "Beep!"<br>11: "Beep!"<br>12: "Boop!" <br>13: I'm sorry...|
+| Spec                                                              |          Input           | Output                                                                                                                                               |
+| :---------------------------------------------------------------- | :----------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
+| User must input number >0                                         |            0             | Error is given as an alert                                                                                                                           |
+| Replace 1 with "beep"                                             |   1 <br>userName: Dave   | 0<br>"beep"                                                                                                                                          |
+| Replace 2 with "boop"                                             |   2 <br>userName: Dave   | 0<br>"beep"<br>"boop"  «                                                                                                                             |
+| Replace 3 with "I'm sorry, userName. I'm afraid I can't do that." |   3 <br>userName: Dave   | 0<br>"beep"<br>"boop"<br>"I'm sorry Dave, I can't do that."                                                                                          |
+| User must input number >0                                         |            0             | Error is given as an alert                                                                                                                           |
+| Special Output Priority                                           | 123   <br>userName: Dave | 0 <br> 1: "Beep"!<br>2: "Boop!"<br>3: "I'm sorry..."<br>...<br>123: I'm sorry... |
 
 
 
