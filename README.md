@@ -25,7 +25,6 @@ The special outputs are listed from highest(top) to lowest(bottom) priority. Ple
 | Replace 1 with "beep"                                             |   1 <br>userName: Dave   | 0<br>"beep"                                                                                                                                          |
 | Replace 2 with "boop"                                             |   2 <br>userName: Dave   | 0<br>"beep"<br>"boop"  «                                                                                                                             |
 | Replace 3 with "I'm sorry, userName. I'm afraid I can't do that." |   3 <br>userName: Dave   | 0<br>"beep"<br>"boop"<br>"I'm sorry Dave, I can't do that."                                                                                          |
-| User must input number >0                                         |            0             | Error is given as an alert                                                                                                                           |
 | Special Output Priority                                           | 123   <br>userName: Dave | 0 <br> 1: "Beep"!<br>2: "Boop!"<br>3: "I'm sorry..."<br>...<br>123: I'm sorry... |
 
 
